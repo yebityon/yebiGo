@@ -11,3 +11,10 @@ func Create2DVec(N int, M int, e int ) [][]int {
 	return ret
 }
 
+func DeepCopy( a  *[]int , b *[]int )  {
+	for _, val := range *a {
+		*b = append(*b, val)
+	}
+}
+
+
