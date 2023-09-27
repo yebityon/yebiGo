@@ -1,0 +1,61 @@
+{
+  "go.useLanguageServer": true,
+
+  "go.formatTool": "goimports",
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "package",
+  "go.buildOnSave": "package",
+  "go.vetOnSave": "off",
+  "go.coverOnSave": false,
+  "go.toolsEnvVars": {
+    "GOPATH": "${workspaceFolder}"
+  },
+  "go.goroot": "/usr/local/go",
+  "go.gopath": "${workspaceFolder}",
+  "go.inferGopath": true,
+  "go.autocompleteUnimportedPackages": true,
+  "go.docsTool": "gogetdoc",
+  "go.useCodeSnippetsOnFunctionSuggest": true,
+  "go.formatCodeOnType": true,
+  "go.addTags": {
+    "json": "json",
+    "yaml": "yaml"
+  },
+  "go.tags": {
+    "json": "json",
+    "yaml": "yaml"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "go.toolsManagement.languageServerExperimentalFeatures": true,
+  "go.toolsManagement.useLanguageServer": true,
+  "go.toolsManagement.useGoProxyToCheckForToolUpdates": true,
+  "go.toolsManagement.disableAutomaticUpdates": false,
+  "go.toolsManagement.gopath": "${env:GOPATH}",
+  "go.toolsManagement.toolsPath": "${env:GOPATH}/bin",
+  "go.toolsManagement.verboseLogs": false,
+  "go.toolsManagement.tools": [
+    {
+      "name": "golangci-lint",
+      "kind": "executable",
+      "args": [
+        "install",
+        "github.com/golangci/golangci-lint/cmd/golangci-lint@latest"
+      ]
+    },
+    {
+      "name": "goimports",
+      "kind": "executable",
+      "args": ["install", "golang.org/x/tools/cmd/goimports@latest"]
+    },
+    {
+      "name": "gopls",
+      "kind": "languageServer",
+      "args": ["install", "golang.org/x/tools/gopls@latest"]
+    },
+    {
+      "name": "gogetdoc",
+      "kind": "executable",
+      "args": ["install", "github.com/zmb3/gogetdoc@latest"]
+    }
+  ]
+}
